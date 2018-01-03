@@ -1,3 +1,7 @@
+body {
+  padding-bottom: 30px;
+}
+
 #duration {
   width: 3em;
 }
@@ -8,11 +12,12 @@
   margin-right: auto;
   max-width: 100%;
   max-height: 100vh;
+  transform-origin: 50% 10px;
+  animation: yureru;
 }
 
 #suzu:active {
-  animation: yureru .1s infinite;
-  transform-origin: 50% 10px;
+  animation-iteration-count: infinite;
 }
 
 @keyframes yureru {

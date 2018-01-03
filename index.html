@@ -22,11 +22,15 @@
 </head>
 <body>
   <div id="app">
-    <p>
-      クリック又はタップして参拝。
-      往復は<input type="number" id="duration" v-model="duration" step="0.1">秒
-    </p>
-    <img src="./suzu.png" id="suzu" ontouchstart="" v-bind:style="{ animationDuration: duration + 's' }">
+    <p>クリック又はタップして参拝</p>
+    <img src="./suzu.png" id="suzu" ontouchstart="" v-bind:style="{ animationDuration: duration + 's', animationIterationCount: is_auto ? 'infinite' : '' }">
+    <ul>
+      <li>往復は<input type="number" id="duration" v-model="duration" step="0.1">秒</li>
+      <li>
+        参拝の自動化<input type="checkbox" id="is_auto" v-model="is_auto">
+        <label for="is_auto">{{ is_auto ? "する" : "しない" }}</label>
+      </li>
+    </ul>
   </div>
   <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E5%8F%82%E6%8B%9D%E3%81%97%E3%81%A6%E3%81%BF%E3%81%9F">Tweet</a>
 
@@ -35,6 +39,7 @@
     el: "#app",
     data: {
       duration: 0.1,
+      is_auto: false,
     },
   });
   </script>
