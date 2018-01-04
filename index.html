@@ -23,7 +23,7 @@
 <body>
   <div id="app">
     <p>クリック又はタップして参拝</p>
-    <img src="./suzu.png" id="suzu" ontouchstart="" v-bind:style="{ animationDuration: duration + 's', animationIterationCount: is_auto ? 'infinite' : '' }">
+    <img src="./suzu.png" id="suzu" ontouchstart="" v-bind:style="{ animationDuration: duration + 's' }" v-bind:class="{ auto: is_auto }">
     <ul>
       <li>往復は<input type="number" id="duration" v-model="duration" step="0.1">秒</li>
       <li>
