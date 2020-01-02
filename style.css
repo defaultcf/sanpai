@@ -1,5 +1,9 @@
 body {
   padding-bottom: 30px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
 }
 
 #duration {
